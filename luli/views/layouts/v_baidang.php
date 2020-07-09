@@ -2,7 +2,7 @@
 // include '../../db_connect.php';
 include 'v_banner.php';
 
-$sql = "SELECT * FROM baidang, sanpham WHERE baidang.masp = sanpham.masp and baidang.trangthai = 1";
+$sql = "SELECT * FROM baidang, sanpham WHERE baidang.masp = sanpham.masp and baidang.trangthai_db = 1";
 
 $rs = mysqli_query($conn, $sql);
 ?>
@@ -19,7 +19,11 @@ $rs = mysqli_query($conn, $sql);
                 <div class="col-lg-3 mb-4 text-center">
                     <div class="product-entry border">
                         <a href="" class="prod-img">
-                            <img src="<?php echo $row['anh']; ?>" class="img-fluid" alt="Alternate Text" />
+                            <?php if (substr($row['anh'], 0, 4) == "http") { ?>
+                                <img src="<?php echo $row['anh']; ?>" class="img-fluid" alt="">
+                            <?php } else { ?>
+                                <img src="./upload/<?php echo $row['anh']; ?>" class="img-fluid" alt="">
+                            <?php } ?>
                         </a>
                         <div class="desc">
                             <h2 class="row-2"><a href="/luli/views/chi-tiet-san-pham.php?id=<?php echo $row['masp']; ?>"><?php echo $row['tensp']; ?></a></h2>

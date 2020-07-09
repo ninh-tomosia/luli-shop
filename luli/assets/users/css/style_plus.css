@@ -166,3 +166,9 @@
 .order-inf {
      display: inline-flex;
 }
+.message-error{
+     text-align: center;
+     background: rgb(238, 141, 124);
+     padding: 10px 20px;
+     color: red;
+}

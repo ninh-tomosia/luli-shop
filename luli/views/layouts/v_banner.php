@@ -9,7 +9,7 @@
      <div class="flexslider">
           <ul class="slides">
                <?php while($row = mysqli_fetch_array($rs)){ ?>
-                    <li style="background-image: url(<?php echo $row['anh']; ?>);">
+                    <li style="background-image: url(<?php if (substr($row['anh'], 0, 4) == "http") {echo $row['anh']; }else{echo "./upload/". $row['anh'];} ?>);">
                          <div class="overlay"></div>
                          <div class="container-fluid">
                               <div class="row">

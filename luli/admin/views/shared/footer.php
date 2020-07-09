@@ -5,7 +5,6 @@
 <script src="../../assets/admin/plugins/bootstrap/js/bootstrap.js"></script>
 
 <!-- Select Plugin Js -->
-<script src="../../assets/admin/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
 <!-- Slimscroll Plugin Js -->
 <script src="../../assets/admin/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>

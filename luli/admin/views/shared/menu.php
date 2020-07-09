@@ -32,13 +32,13 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="/luli/admin/views/don-hang.php">
                 <i class="material-icons">assignment</i>
                 <span>Quản lý đơn hàng</span>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="/luli/admin/views/khuyen-mai.php">
                 <i class="material-icons">shopping_cart</i>
                 <span>Khuyến mãi</span>
             </a>

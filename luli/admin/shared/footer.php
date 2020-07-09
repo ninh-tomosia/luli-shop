@@ -1,3 +1,4 @@
+    <div style="margin-bottom: 20px; width: 100%; height: 10px; position: relative;"></div>
     <!-- Jquery Core Js -->
     <script src="../assets/admin/plugins/jquery/jquery.min.js"></script>
 

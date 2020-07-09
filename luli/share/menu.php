@@ -6,9 +6,9 @@
                     <div id="colorlib-logo"><a href="/luli">LULI</a></div>
                 </div>
                 <div class="col-sm-5 col-md-3">
-                    <form action="#" class="search-wrap">
+                    <form action="/luli/views/tim-kiem.php" class="search-wrap" method="POST">
                         <div class="form-group">
-                            <input type="search" class="form-control search" placeholder="Tìm kiếm...">
+                            <input type="search" class="form-control search" name="search" placeholder="Tìm kiếm...">
                             <button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
                         </div>
                     </form>

@@ -20,9 +20,9 @@
                     <?php foreach ($_SESSION["cart_shoes"] as $i) {
                         $thanhTien = $i["gia"] * $i["soluong"];
                         $tongTien += $thanhTien;
-                        $_SESSION["cart"] = array(                           
+                        $_SESSION["cart"] = array(
                             "masp" => $i["masp"],
-                            "soluong" => $i["soluong"], 
+                            "soluong" => $i["soluong"],
                             "thanhtien" => $thanhTien,
                             "gia" => $i["gia"],
                             "hinhanh" => $i["hinhanh"]
@@ -34,7 +34,7 @@
                                 <?php if (substr($i["hinhanh"], 0, 4) == "http") { ?>
                                     <img src="<?php echo $i["hinhanh"]; ?>" alt="no image" width="80px" height="80px">
                                 <?php } else { ?>
-                                    <img src="../../upload/<?php echo $i["hinhanh"]; ?>" alt="no image">
+                                    <img src="../upload/<?php echo $i["hinhanh"]; ?>" width="80px" alt="no image">
                                 <?php } ?>
                             </td>
                             <td style="width: 200px; text-align: center;">

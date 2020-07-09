@@ -6,7 +6,6 @@
         
         case "all":{
             if (isset($_SESSION["cart_shoes"])){
-                session_unset();
                 unset($_SESSION["cart_shoes"]);
                 header("location: /luli/views/gio-hang.php");
             }else{
@@ -19,7 +18,7 @@
                 if (isset($id)) {
                     unset($_SESSION["cart_shoes"][$id]);
                     if($_SESSION["cart_shoes"] == null){
-                        session_unset();
+                        unset($_SESSION["cart_shoes"]);
                         header("location: /luli/views/gio-hang.php");
                     }else{
                         header("location: /luli/views/gio-hang.php");
