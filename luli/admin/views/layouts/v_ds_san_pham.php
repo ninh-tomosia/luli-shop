@@ -39,8 +39,8 @@ if ($rs != null) {
                 <tbody>
                     <?php while ($row = mysqli_fetch_array($rs)) { ?>
                         <tr>
-                            <td style="text-align: center;"><?php echo $row['masp']; ?></td>
-                            <td style="width: 300px;"><?php echo $row['tensp']; ?></td>
+                            <td style="text-align: center;"><?php echo mb_strtoupper($row['masp'], "UTF-8"); ?></td>
+                            <td style="width: 300px;"><?php echo mb_strtoupper($row['tensp'], "UTF-8"); ?></td>
                             <td style="width: 80px;">
                                 <?php if (substr($row['anh'], 0, 4) == "http") { ?>
                                     <img src="<?php echo $row['anh']; ?>" alt="" style="width: 80px;">

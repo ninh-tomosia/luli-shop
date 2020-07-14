@@ -5,11 +5,7 @@
         if (isset($_SESSION["cart_shoes"]) != null) {
             $tongTien = 0;
         ?>
-            <form action="/luli/views/handlers/handle_thanh-toan.php" method="POST">
-                <input type="text" value="<?php if (isset($_SESSION["userid"])) {
-                                                $idkh = $_SESSION["userid"];
-                                                echo $idkh;
-                                            } ?>" name="idkh" hidden>
+            <!-- <form action="/luli/views/handlers/handle_thanh-toan.php" method="POST"> -->
                 <table style="width: 100%;">
                     <p style="text-align: right; padding-bottom: 0px; margin-bottom: 0px;">
                         <a href="/luli/views/handlers/handle_deleted_cart_item.php?id=''&delete=all" style="color: red;">Xóa tất cả</a>
@@ -20,13 +16,6 @@
                     <?php foreach ($_SESSION["cart_shoes"] as $i) {
                         $thanhTien = $i["gia"] * $i["soluong"];
                         $tongTien += $thanhTien;
-                        $_SESSION["cart"] = array(
-                            "masp" => $i["masp"],
-                            "soluong" => $i["soluong"],
-                            "thanhtien" => $thanhTien,
-                            "gia" => $i["gia"],
-                            "hinhanh" => $i["hinhanh"]
-                        );
                     ?>
                         <tr>
                             <td style="width: 500px;"><?php echo $i["name"]; ?></td>
@@ -59,11 +48,14 @@
                     </tr>
                     <tr>
                         <td colspan="7" style="text-align: right;">
-                            <button class="btn btn-thanh-toan" type="submit">Thanh toán</button>
+                            <!-- <button class="btn btn-thanh-toan" type="submit">Thanh toán</button> -->
+                            <button class="btn btn-thanh-toan">
+                                <a href="./thanh-toan.php">Đặt hàng</a>
+                            </button>
                         </td>
                     </tr>
                 </table>
-            </form>
+            <!-- </form> -->
         <?php } else { ?>
             <h4 style="text-align: center; background: #FF9966; padding: 10px 20px;">Không có sản phẩm nào trong giỏ hàng</h4>
 

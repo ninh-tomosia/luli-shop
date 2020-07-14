@@ -26,24 +26,20 @@
                             </div>
                         </div>
                         <div class="row clearfix">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" name="gia" value="<?php echo $row['gia']; ?>" class="form-control" placeholder="Giá">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                        </div>
+                        <div class="row clearfix">
+                            <label style="margin-left: 15px;" for="sohc">Số hiện còn: <?php echo $row['sohiencon']; ?></label>
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" name="soluong" value="<?php echo $row['soluong']; ?>" class="form-control" placeholder="Số lượng">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" name="sohc" value="<?php echo $row['sohiencon']; ?>" class="form-control" placeholder="Số hiện còn">
+                                        <input type="text" name="soluong" value="" class="form-control" placeholder="Số lượng">
                                     </div>
                                 </div>
                             </div>

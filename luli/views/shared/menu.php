@@ -34,12 +34,14 @@
                             <li class="cart"><a id="login" class="menu-item" href="./login.php"><i class="icon-user2"></i> Đăng nhập</a></li>
                         <?php } else { ?>
                             <li class="cart has-dropdown">
-                                <a id="login" class="menu-item" href="./thong-tin.php?id=<?php echo $_SESSION["userid"]; ?>" style="color: red;">
+                                <a id="login" class="menu-item" href="./thong-tin.php" style="color: red;">
                                     <i class="icon-user2"></i> <?php echo $_SESSION["user"]; ?>
                                 </a>
                                 <ul class="dropdown custom-dropdown">
-                                    <li><a href="./thong-tin.php?id=<?php echo $_SESSION["userid"]; ?>">Xem thông tin </a></li>
-                                    <li><a href="./handlers/handle_logout.php?id=<?php echo $_SESSION["userid"]; ?>">Đăng xuất</a></li>
+                                    <li><a href="./thong-tin.php">Xem thông tin </a></li>
+                                    <li><a href="./thong-tin-don-hang.php">Thông tin đơn hàng </a></li>
+                                    <li><a href="./lich-su-mua-hang.php">Lịch sử mua hàng </a></li>
+                                    <li><a href="./handlers/handle_logout.php">Đăng xuất</a></li>
                                 </ul>
                             </li>
                         <?php } ?>

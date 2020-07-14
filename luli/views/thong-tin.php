@@ -1,7 +1,6 @@
 <?php 
 include '../db_connect.php';
 include './shared/header.php'; 
-$id = $_REQUEST['id'];
 ?>
 
 <div id="page">

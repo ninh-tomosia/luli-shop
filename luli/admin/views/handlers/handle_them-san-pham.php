@@ -9,9 +9,9 @@ try{
         $loaisp = $_POST['loaisp'];
         $nhacc = $_POST['nhacc'];
         $hinhanh = $_FILES['photo']['name'];
-        
-        $sql = "INSERT INTO sanpham(tensp, soluong, gia, sohiencon, anh, nhacungcap, loaisanpham, trangthai)
-                VALUES('$tensp', '$soluong', '$gia', '$soluong', '$hinhanh', '$nhacc', '$loaisp', 1)";
+        $masp = "SP".mt_rand();
+        $sql = "INSERT INTO sanpham(masp, tensp, soluong, gia, sohiencon, anh, nhacungcap, loaisanpham, trangthai)
+                VALUES('$masp', '$tensp', '$soluong', '$gia', '$soluong', '$hinhanh', '$nhacc', '$loaisp', 1)";
 
         $rs = mysqli_query($conn, $sql);
         if($rs){
