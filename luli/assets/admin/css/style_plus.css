@@ -1,9 +1,10 @@
-.form-user-control{
+.form-user-control {
     width: 400px;
     margin: 0 auto;
     position: relative;
 }
-.img-user{
+
+.img-user {
     width: 350px;
     height: 350px;
     border-radius: 50%;
@@ -12,34 +13,87 @@
     background-repeat: repeat;
     background-size: cover;
 }
-.img-user img{
+
+.img-user img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     position: relative;
 }
-.name-user{
+
+.name-user {
     padding: 10px;
     width: 100%;
 }
-.name-user h2{
+
+.name-user h2 {
     padding: 10px;
     width: 100%;
     text-align: center;
     font-size: 24px;
     color: rgb(2, 2, 75);
 }
-.form-control-user{
+
+.form-control-user {
     width: 100%;
     display: flex;
 }
-.flow-item{
+
+.flow-item {
     flex: 1 0 50%;
 }
-.flow-item h5{
+
+.flow-item h5 {
     font-size: 16px;
     text-align: center;
 }
-.drop-custom{
+
+.drop-custom {
     width: 200px;
+}
+
+.tb-v-dh {
+    width: 100%;
+    border: .5px solid silver;
+}
+
+.tb-v-dh tr {
+    border-top: .5px solid silver;
+}
+
+.tb-v-dh tr td,
+th {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.view-don-hang {
+    width: 1000px;
+    padding: 10px;
+    position: absolute;
+    border: .5px solid silver;
+}
+
+.view-don-hang tr th,
+td {
+    font-size: 14px;
+    margin: 4px 0px;
+    text-align: left;
+    padding: 4px 20px 4px 4px;
+}
+
+#tinhtrang {
+    padding: 4px 20px;
+    border: none;
+    background: none;
+    margin-left: 20px;
+}
+
+.btn-btnlink {
+    margin-left: 20px;
+    margin-right: 100px;
+    margin-top: 50px;
+    border: none;
+    background: none;
+    padding: 6px 20px;
 }
