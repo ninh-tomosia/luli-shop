@@ -2,16 +2,16 @@
 try {
     if (isset($_REQUEST['id'])) {
         $madh = $_REQUEST['id'];
-        $sql = "SELECT * FROM donhang, khachhang WHERE donhang.makh = khachhang.makh AND madonhang = $madh";
+        $sql = "SELECT * FROM donhang, khachhang WHERE donhang.makh = khachhang.makh AND madonhang = '$madh'";
         $rs = mysqli_query($conn, $sql);
         if ($rs) {
             $dh = mysqli_fetch_array($rs);
 ?>
             <h4 style="text-transform: uppercase; text-align: center; margin-top: -10px;">Đơn hàng</h4>
             <div class="view-don-hang">
-                <form action="/luli/admin/views/handlers/hd_xu-ly-don-hang.php" method="POST">
+                <form action="/luli/admin/views/handlers/hd_xu-ly-don-hang.php" method="POST" >
                     <input type="text" value="<?php echo $dh['madonhang']; ?>" name="madh" hidden>
-                    <table class="tb-dh" style="text-align: left;">
+                    <table class="tb-dh" style="text-align: left;" >
                         <tr>
                             <th>Mã đơn hàng: </th>
                             <th style="width: 400px;"><?php echo $dh['madonhang']; ?></th>
@@ -42,11 +42,7 @@ try {
                                     <th>Thành tiền</th>
                                 </tr>
                                 <?php
-                                $qr = "SELECT ct.masp, ct.soluong, ct.thanhtien, sp.tensp 
-                                FROM chitietdonhang as ct
-                                JOIN sanpham as sp 
-                                ON ct.masp = sp.masp
-                                WHERE madh = $madh;";
+                                $qr = "SELECT * FROM chitietdonhang, sanpham WHERE chitietdonhang.masp = sanpham.masp AND madh = '$madh'";
                                 $cts = mysqli_query($conn, $qr);
                                 while ($ct = mysqli_fetch_array($cts)) {
                                 ?>

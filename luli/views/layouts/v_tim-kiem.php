@@ -4,8 +4,8 @@
             <div style="margin-top: 150px;">
                 <div class="row row-pb-md">
                     <?php
-                    if (isset($_POST['search'])) {
-                        $param = $_POST['search'];
+                    if (isset($_GET['search'])) {
+                        $param = $_GET['search'];
                         $sql = "SELECT * FROM sanpham AS sp
                     INNER JOIN loaisanpham AS lsp
                     ON sp.loaisanpham = lsp.maloai

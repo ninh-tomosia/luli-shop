@@ -33,7 +33,7 @@
                                         <?php if (substr($ct['anh'], 0, 4) == "http") { ?>
                                             <img src="<?php echo $ct['anh']; ?>" class="img-fluid" alt="" width="50px">
                                         <?php } else { ?>
-                                            <img src="../upoad/<?php echo $ct['anh']; ?>" class="img-fluid" alt="" width="50px">
+                                            <img src="/luli/upload<?php echo "/".$ct['anh']; ?>" class="img-fluid" alt="" width="50px">
                                         <?php } ?>
                                     </td>
                                 </tr>

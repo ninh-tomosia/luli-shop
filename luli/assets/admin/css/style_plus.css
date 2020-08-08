@@ -71,7 +71,7 @@ th {
     width: 1000px;
     padding: 10px;
     position: absolute;
-    border: .5px solid silver;
+    /* border: .5px solid silver; */
 }
 
 .view-don-hang tr th,

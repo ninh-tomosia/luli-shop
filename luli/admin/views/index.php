@@ -3,7 +3,7 @@
     if(isset($_SESSION["adminid"]) == false){header("Location: /luli/admin/");}else{     
     include './shared/header.php'; 
 ?>
-<div  style="background: black; position: absolute; width: 100%; height: 100%;">
+<div  style="background: #000011; position: absolute; width: 100%; height: 100%;">
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
